@@ -4,9 +4,9 @@
 ## YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
 
 ## Screenshots
-<img src=part1/media/ui%20no%20filter.png>
-<img src=part1/media/ui%20with%20filter.png>
-<img src=part1/media/custom%20kernel.png>
+<img src=media/ui%20no%20filter.png>
+<img src=media/ui%20with%20filter.png>
+<img src=media/custom%20kernel.png>
 
 Based off of:
 
