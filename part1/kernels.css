@@ -1,0 +1,36 @@
+@import url("https://webglfundamentals.org/webgl/resources/webgl-tutorials.css");
+
+body {
+    margin-left: 10px;
+    background-color: #c2d1e9;
+}
+
+canvas, #canvas {
+    width: 90%;
+    height: 80%;
+    display: block;
+}
+
+#uiContainer {
+    font-family: sans-serif;
+    text-shadow: none;
+    background: beige;
+    pointer-events: all;
+    position: fixed;
+}
+
+#kernel-input input:not(#kernel-input #kernel-name-text-box),
+#filter-input input:not(#filter-input #filter-name-text-box),
+#color-input input:not(#color-input #color-name-text-box) {
+    width: 60px;
+    margin: 2px;
+}
+
+#control-list label {
+    display: inline-block;
+    width: 100px;
+}
+
+#control-list, #input-boxes, #filter-input, #color-input, #input-buttons, #ui-visibility-button {
+    display: none;
+}

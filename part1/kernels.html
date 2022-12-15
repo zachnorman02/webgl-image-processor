@@ -1,0 +1,182 @@
+<head>
+  <link rel="stylesheet" href="kernels.css" />
+</head>
+<body>
+  <div id="input-buttons">
+    <button onClick="switchToKernel()">Kernel</button>
+    <button onClick="switchToFilter()">Filter</button>
+    <button onClick="switchToColor()">Color</button>
+  </div>
+  <div id="input-boxes">
+    <div id="kernel-input">
+    <label for="kernel-name-text-box">Input kernel name</label>
+    <input type="text" id="kernel-name-text-box" value="" />
+    <br />
+    <input type="number" id="kernel1" aria-label="kernel1" value="0" />
+    <input type="number" id="kernel2" aria-label="kernel2" value="0" />
+    <input type="number" id="kernel3" aria-label="kernel3" value="0" />
+    <input type="number" id="kernel4" aria-label="kernel4" value="0" />
+    <input type="number" id="kernel5" aria-label="kernel5" value="0" />
+    <br />
+    <input type="number" id="kernel6" aria-label="kernel6" value="0" />
+    <input type="number" id="kernel7" aria-label="kernel7" value="0" />
+    <input type="number" id="kernel8" aria-label="kernel8" value="0" />
+    <input type="number" id="kernel9" aria-label="kernel9" value="0" />
+    <input type="number" id="kernel10" aria-label="kernel10" value="0" />
+    <br />
+    <input type="number" id="kernel11" aria-label="kernel11" value="0" />
+    <input type="number" id="kernel12" aria-label="kernel12" value="0" />
+    <input type="number" id="kernel13" aria-label="kernel13" value="1" />
+    <input type="number" id="kernel14" aria-label="kernel14" value="0" />
+    <input type="number" id="kernel15" aria-label="kernel15" value="0" />
+    <br />
+    <input type="number" id="kernel16" aria-label="kernel16" value="0" />
+    <input type="number" id="kernel17" aria-label="kernel17" value="0" />
+    <input type="number" id="kernel18" aria-label="kernel18" value="0" />
+    <input type="number" id="kernel19" aria-label="kernel19" value="0" />
+    <input type="number" id="kernel20" aria-label="kernel20" value="0" />
+    <br />
+    <input type="number" id="kernel21" aria-label="kernel21" value="0" />
+    <input type="number" id="kernel22" aria-label="kernel22" value="0" />
+    <input type="number" id="kernel23" aria-label="kernel23" value="0" />
+    <input type="number" id="kernel24" aria-label="kernel24" value="0" />
+    <input type="number" id="kernel25" aria-label="kernel25" value="0" />
+    <button onclick="appendKernel()">Add kernel</button>
+    <button onclick="setIdentity()">Set to identity</button>
+    <br />
+    <label for="divide-text-box">Divide all by:</label>
+    <input type="number" id="divide-text-box" value="" />
+    <p>Note: attempting to divide by 0 will be equivalent to dividing by 1</p>
+  </div>
+  <div id="filter-input">
+    For image filters (possibly with a length-4 offset)
+    <br/>
+    <label for="filter-name-text-box">Input filter name</label>
+    <input type="text" id="filter-name-text-box" value="" />
+    <br />
+    <input type="number" id="filter1" aria-label="filter1" value="1" />
+    <input type="number" id="filter2" aria-label="filter2" value="0" />
+    <input type="number" id="filter3" aria-label="filter3" value="0" />
+    <input type="number" id="filter4" aria-label="filter4" value="0" />
+    <br />
+    <input type="number" id="filter5" aria-label="filter5" value="0" />
+    <input type="number" id="filter6" aria-label="filter6" value="1" />
+    <input type="number" id="filter7" aria-label="filter6" value="0" />
+    <input type="number" id="filter8" aria-label="filter8" value="0" />
+    <br />
+    <input type="number" id="filter9" aria-label="filter9" value="0" />
+    <input type="number" id="filter10" aria-label="filter10" value="0" />
+    <input type="number" id="filter11" aria-label="filter11" value="1" />
+    <input type="number" id="filter12" aria-label="filter12" value="0" />
+    <br />
+    <input type="number" id="filter13" aria-label="filter13" value="0" />
+    <input type="number" id="filter14" aria-label="filter14" value="0" />
+    <input type="number" id="filter15" aria-label="filter15" value="0" />
+    <input type="number" id="filter16" aria-label="filter16" value="1" />
+    <br/>
+    Offset
+    <input type="number" id="offset1" aria-label="offset1" value="0" />
+    <input type="number" id="offset2" aria-label="offset2" value="0" />
+    <input type="number" id="offset3" aria-label="offset3" value="0" />
+    <input type="number" id="offset4" aria-label="offset4" value="0" />
+    <button onclick="appendFilter()">Add filter</button>
+    <button onclick="setFilterIdentity()">Set to identity</button>
+  </div>
+  <div id="color-input">
+    <label for="color-name-text-box">Input color name</label>
+    <input type="text" id="color-name-text-box" value="" />
+    <br />
+    <input type="number" id="color1" aria-label="color1" value="1" />
+    <input type="number" id="color2" aria-label="color2" value="0" />
+    <input type="number" id="color3" aria-label="color3" value="0" />
+    <br />
+    <input type="number" id="color4" aria-label="color4" value="0" />
+    <input type="number" id="color5" aria-label="color5" value="1" />
+    <input type="number" id="color6" aria-label="color6" value="0" />
+    <br />
+    <input type="number" id="color7" aria-label="color6" value="0" />
+    <input type="number" id="color8" aria-label="color8" value="0" />
+    <input type="number" id="color9" aria-label="color9" value="1" />
+    <button onclick="appendColor()">Add color</button>
+    <button onclick="setColorIdentity()">Set to identity</button>
+  </div>
+  </div>
+  <!-- <div id="url-input">
+        <label for="url-text-box">Input image url</label>
+        <input type="text" id="url-text-box" value="">
+        <button onclick="main()">Set image</button>
+    </div> -->
+    </div>
+	</div>
+  Choose image file: <input type="file" accept="image/*" id="fileInput" />
+  <canvas id="canvas"></canvas>
+  <div id="uiContainer">
+    <button id="ui-visibility-button" onclick="changeUIVisibility()">Hide options</button>
+    <div id="control-list">
+      <div>
+        <label for="input-brightness">Brightness</label>
+        <input type="range" min="-1" max="1" step="0.05" id="input-brightness">
+      </div>
+      <div>
+        <label for="input-contrast">Contrast</label>
+        <input type="range" min="-1" max="1" step="0.05" id="input-contrast">
+      </div>
+      <div>
+        <label for="input-saturation">Saturation</label>
+        <input type="range" min="-1" max="1" step="0.05" id="input-saturation">
+      </div>
+      <div>
+        <label for="input-exposure">Exposure</label>
+        <input type="range" min="-1" max="1" step="0.05" id="input-exposure">
+      </div>
+      <button onclick="resetSliders()">Reset sliders</button>
+    <div>
+    <div id="ui" style="display: block;"></div>
+  </div>
+<script src="https://webgl2fundamentals.org/webgl/resources/jquery-1.7.1.min.js"></script>
+<script src="https://webgl2fundamentals.org/webgl/resources/jquery.tablednd_0_5.js"></script>
+<script src="https://webgl2fundamentals.org/webgl/resources/webgl-utils.js"></script>
+<script src="kernels.js"></script>
+<script>
+  function switchToKernel() {
+    document.getElementById("filter-input").style.display = 'none';
+    document.getElementById("color-input").style.display = "none";
+    document.getElementById("kernel-input").style.display = "block";
+  }
+
+  function switchToFilter() {
+    document.getElementById("filter-input").style.display = "block";
+    document.getElementById("color-input").style.display = "none";
+    document.getElementById("kernel-input").style.display = "none";
+  }
+
+  function switchToColor() {
+    document.getElementById("filter-input").style.display = "none";
+    document.getElementById("color-input").style.display = "block";
+    document.getElementById("kernel-input").style.display = "none";
+  }
+
+  function changeUIVisibility() {
+    if (document.querySelector("#ui").style.display === 'block') {
+      document.querySelector("#ui").style.display = 'none';
+      document.getElementById("control-list").style.display = 'none';
+      document.getElementById('ui-visibility-button').innerText = 'Show options';
+    } else {
+      document.querySelector("#ui").style.display = 'block';
+      document.getElementById("control-list").style.display = 'block';
+      document.getElementById('ui-visibility-button').innerText = 'Hide options';
+    }
+  }
+
+  function resetSliders() {
+    document.getElementById("input-brightness").value = 0;
+    document.getElementById("input-contrast").value = 0;
+    document.getElementById("input-exposure").value = 0;
+    document.getElementById("input-saturation").value = 0;
+    setBrightness(0);
+    setContrast(0);
+    setExposure(0);
+    setSaturation(0);
+  }
+</script>
+</body>
