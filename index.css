@@ -14,9 +14,10 @@ canvas, #canvas {
 #uiContainer {
     font-family: sans-serif;
     text-shadow: none;
-    background: beige;
+    background: aliceblue;
     pointer-events: all;
     position: fixed;
+    padding: 5px;
 }
 
 #kernel-input input:not(#kernel-input #kernel-name-text-box),
@@ -33,4 +34,41 @@ canvas, #canvas {
 
 #control-list, #input-boxes, #filter-input, #color-input, #input-buttons, #ui-visibility-button {
     display: none;
+}
+
+#options {
+    background: aliceblue;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#options div {
+    margin-bottom: 5px;
+}
+
+#ui {
+    width: unset;
+
+}
+
+#ui table {
+    width: 100%;
+}
+
+#ui tbody {
+    display: grid;
+}
+
+#ui tr {
+    padding: 5px;
+}
+
+#ui tr:nth-child(2n+1) {
+    background: lightsteelblue;
+}
+
+#ui tr:nth-child(2n) {
+    background: lavender;
 }
