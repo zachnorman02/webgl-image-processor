@@ -1,9 +1,9 @@
 
 ## WebGL Interactive Kernels
 
-# YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
+### YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
 
-# Screenshots
+### Screenshots
 <img src=media/ui%20no%20filter.png>
 <img src=media/ui%20with%20filter.png>
 <img src=media/custom%20kernel.png>
