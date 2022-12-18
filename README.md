@@ -3,6 +3,8 @@
 
 ### YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
 
+### Demo: <https://zachnorman02.github.io/webgl-image-processor>
+
 ### Screenshots
 <img width="1792" alt="image" src="https://user-images.githubusercontent.com/15839864/208318571-66088576-8332-4260-8eaf-3dc3622398de.png">
 <img width="1792" alt="image" src="https://user-images.githubusercontent.com/15839864/208318684-a9e603d9-b41d-40fa-8d72-5dd49648ecaa.png">
