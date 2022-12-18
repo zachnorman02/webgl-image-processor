@@ -1,12 +1,12 @@
 
 ## WebGL Interactive Kernels
 
-## YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
+### YouTube/Dropbox/Drive Link: <https://youtu.be/FJg0Nx1mzFE>
 
-## Screenshots
-<img src=media/ui%20no%20filter.png>
-<img src=media/ui%20with%20filter.png>
-<img src=media/custom%20kernel.png>
+### Screenshots
+<img width="1792" alt="image" src="https://user-images.githubusercontent.com/15839864/208318571-66088576-8332-4260-8eaf-3dc3622398de.png">
+<img width="1792" alt="image" src="https://user-images.githubusercontent.com/15839864/208318684-a9e603d9-b41d-40fa-8d72-5dd49648ecaa.png">
+<img width="1792" alt="image" src="https://user-images.githubusercontent.com/15839864/208318726-35a3ede9-730a-44fd-8ac9-80d64675a86a.png">
 
 Based off of:
 
@@ -22,3 +22,5 @@ This is the final project I did for my Computer Graphics course at Northeastern 
 **Filter:** A 4x4 matrix, where each pixel's color and alpha values are multiplied by the matrix. Filter also includes an option for an optional offset, which is a vector added to the final color value at the end. This does not use the surrounding pixels' colors, it just uses the current color of the current pixel.
 
 **Color:** Similar to Filter, except it is a 3x3 matrix, and there is no offset option.
+
+To use, upload an image, then play around with the pre-existing filters, or use your own. Filters can also be rearranged to change the order the effects are applied in. Images can also be saved by right-clicking on the image and clicking "Save image".
