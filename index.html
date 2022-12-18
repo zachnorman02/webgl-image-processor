@@ -102,7 +102,24 @@
         <button onclick="setColorIdentity()">Set to identity</button>
       </div>
     </div>
-  Choose image file: <input type="file" accept="image/*" id="fileInput" />
+    Choose image file: <input type="file" accept="image/*" id="fileInput" />
+    <button id="modal-button">About</button>
+  </div>
+  <div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>
+        This is the final project I did for my Computer Graphics course at Northeastern University, which I took in Fall 2022. I was interested in exploring WebGL and diving deeper into image processing. I created this as an interactive image post-processor where various filters could be applied. I wanted some to be included with the program, but there is also the option for the user to input their own.
+        <br/><br/>
+        Kernel: This is a matrix that can be up to a 5x5, though the inner 3x3 or 1x1 can be used. The very center represents the current pixel you are calculating the color for, and the other matrix values represent the surrounding pixel values. The surrounding pixel colors are multiplied by their corresponding kernel value, and then all the values are added together to get the resulting new color.
+        <br/><br/>
+        Filter: A 4x4 matrix, where each pixel's color and alpha values are multiplied by the matrix. Filter also includes an option for an optional offset, which is a vector added to the final color value at the end. This does not use the surrounding pixels' colors, it just uses the current color of the current pixel.
+        <br/><br/>
+        Color: Similar to Filter, except it is a 3x3 matrix, and there is no offset option.
+        <br/><br/>
+        To use, upload an image, then play around with the pre-existing filters, or use your own. Filters can also be rearranged to change the order the effects are applied in. Images can also be saved by right-clicking on the image and clicking "Save image".
+      </p>
+    </div>
   </div>
   <canvas id="canvas"></canvas>
   <div id="uiContainer">
@@ -172,6 +189,26 @@
     setContrast(0);
     setExposure(0);
     setSaturation(0);
+  }
+
+  const modal = document.getElementById("modal");
+
+  const btn = document.getElementById("modal-button");
+
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 </script>
 </body>

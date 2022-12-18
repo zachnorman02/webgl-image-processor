@@ -18,6 +18,7 @@ canvas, #canvas {
     pointer-events: all;
     position: fixed;
     padding: 5px;
+    display: none;
 }
 
 #kernel-input input:not(#kernel-input #kernel-name-text-box),
@@ -42,6 +43,7 @@ canvas, #canvas {
     width: fit-content;
     padding: 5px;
     margin-bottom: 5px;
+    position: relative;
 }
 
 #options div {
@@ -71,4 +73,49 @@ canvas, #canvas {
 
 #ui tr:nth-child(2n) {
     background: lavender;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#modal-button {
+    position: absolute;
+    padding: 5px;
+    height: 21.5px;
+    align-items: center;
+    display: flex;
+    right: 5px;
+    top: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

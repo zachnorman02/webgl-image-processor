@@ -602,6 +602,7 @@ function main() {
     document.getElementById("input-boxes").style.display = "block";
     document.getElementById("input-buttons").style.display = "block";
     document.getElementById("ui-visibility-button").style.display = "block";
+    document.getElementById("uiContainer").style.display = "block";
     render(image);
   };
 }
