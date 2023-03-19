@@ -119,3 +119,9 @@ canvas, #canvas {
     text-decoration: none;
     cursor: pointer;
 }
+
+.github-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
